@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarketWatch Marketing Intelligence - Competitor campaign tracking and analysis.">
+  <title>MarketWatch | Marketing Intelligence</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+          </svg>
+        </div>
+        <span class="brand-name">MarketWatch</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item" id="nav-home">
+          <a href="index.html">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li class="nav-item active" id="nav-marketing">
+          <a href="marketing.html">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+            <span>Marketing AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-product">
+          <a href="product.html">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <span>Product AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-sales">
+          <a href="sales.html">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 1.21-1.04 2.01-2.9 2.01-1.99 0-2.77-.97-2.87-2.4H5.98c.1 2.15 1.75 3.42 3.72 3.89V21h3v-2.19c2-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.77-4.7-4.36z"/></svg>
+            <span>Sales AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-strategy">
+          <a href="strategy.html">
+            <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+            <span>Strategy AI</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="agent-status-panel">
+          <div class="agent-status-title">Agent Network Status</div>
+          <div class="agent-status-list">
+            <div class="agent-status-row">
+              <span>Marketing Agent</span>
+              <span><span class="agent-dot active" id="dot-marketing"></span>Scanning</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Product Agent</span>
+              <span><span class="agent-dot idle" id="dot-product"></span>Idle</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Sales Agent</span>
+              <span><span class="agent-dot idle" id="dot-sales"></span>Idle</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Strategy Agent</span>
+              <span><span class="agent-dot idle" id="dot-strategy"></span>Idle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header>
+        <div class="page-title">
+          <h1>Marketing Campaign Intelligence</h1>
+          <p>Scanning active competitor ads, spends, channels, and audience engagement</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-primary" id="btn-open-modal">
+            <svg style="width:16px; height:16px; fill:currentColor; margin-bottom:-2px;" viewBox="0 0 24 24">
+              <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/>
+            </svg>
+            <span>Simulate Campaign Detection</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Marketing Stats -->
+      <section class="grid-stats">
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Total Tracked Ad Spend</span>
+            <div class="stat-icon primary">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="mkt-total-spend">$--</div>
+          <div class="stat-trend positive">Combined competitors</div>
+        </div>
+
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Total Campaign Clicks</span>
+            <div class="stat-icon secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M19 3H4.99c-1.11 0-1.98.89-1.98 2L3 19c0 1.1.88 2 1.99 2H19c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 12h-4c0 1.66-1.35 3-3 3s-3-1.34-3-3H4.99V5H19v10z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="mkt-total-clicks">--</div>
+          <div class="stat-trend positive">Estimated engagement</div>
+        </div>
+
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Primary Focus Channel</span>
+            <div class="stat-icon success">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="mkt-main-channel" style="font-size: 1.5rem; display: flex; align-items: center; height: 48px;">--</div>
+          <div class="stat-trend positive">Highest ad frequency</div>
+        </div>
+      </section>
+
+      <!-- TF Lite Classifier & 3-Layer Pipeline Simulator -->
+      <section class="grid-main">
+        
+        <!-- Left: Live Input & Scraper Simulation -->
+        <div class="panel" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="panel-title">
+            <span>TF Lite Real-time Input Simulator</span>
+            <span class="badge badge-positive">Classification Engine Active</span>
+          </div>
+          
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <!-- Layer 1: Scrape Config -->
+            <div style="display: flex; flex-direction: column; gap: 6px; background: rgba(0,0,0,0.15); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border);">
+              <span style="font-size: 0.75rem; font-weight: 700; color: var(--accent-secondary); text-transform: uppercase;">Layer 1: Dynamic Scraper Config</span>
+              <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 6px;">
+                <select id="trending-platform-select" style="padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; font-size: 0.8rem; outline: none;">
+                  <option value="twitter" style="background:#0b0f19;">Twitter / X</option>
+                  <option value="instagram" style="background:#0b0f19;">Instagram</option>
+                  <option value="facebook" style="background:#0b0f19;">Facebook</option>
+                  <option value="flipkart" style="background:#0b0f19;">Flipkart</option>
+                  <option value="amazon" style="background:#0b0f19;">Amazon</option>
+                </select>
+                <div style="display: flex; gap: 6px;">
+                  <button class="btn btn-secondary" id="btn-camera-sim" style="flex: 1; padding: 6px 10px; justify-content: center; font-size: 0.75rem;">Camera Scan</button>
+                  <button class="btn btn-secondary" id="btn-scrape-sim" style="flex: 1; padding: 6px 10px; justify-content: center; font-size: 0.75rem;">Scrape Link</button>
+                </div>
+              </div>
+              <input type="text" id="scrape-url-field" value="https://twitter.com/marketwatch/trends" placeholder="Scrape URL..." style="margin-top: 8px; padding: 8px; border-radius: 6px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; font-size: 0.8rem; outline: none; width: 100%; box-sizing: border-box;">
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px;">
+              <label for="text-input-field" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Scraped Content Feed</label>
+              <textarea id="text-input-field" rows="3" placeholder="e.g. Acme Corp just announced a major pricing drop on Twitter causing massive positive hype..." style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.04); border: 1px solid var(--card-border); color: #fff; font-family: inherit; font-size: 0.85rem; outline: none; resize: none;"></textarea>
+            </div>
+            
+            <button class="btn btn-primary" id="btn-run-classifier" style="width: 100%; justify-content: center;">Run TF Lite Classifier</button>
+          </div>
+
+          <!-- Camera Screen Placeholder -->
+          <div id="camera-placeholder" style="display: none; position: relative; border-radius: 8px; height: 120px; overflow: hidden; background: #000; border: 1px solid var(--accent-primary); margin-top: 10px;">
+            <div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; color: var(--accent-secondary); font-weight: 600; text-transform: uppercase;">
+              <span class="agent-dot active" style="margin-right:8px; animation: pulse 0.5s infinite alternate;"></span>
+              Camera Input Active: Analyzing QR/Ad Text...
+            </div>
+          </div>
+
+          <!-- Layer 1 Web Scrape Log -->
+          <div style="display: flex; flex-direction: column; gap: 8px; margin-top: 8px;">
+            <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Layer 1: Web Scraper (Live Feed)</span>
+            <div id="layer1-log" style="padding: 10px; border-radius: 8px; background: rgba(0,0,0,0.3); border: 1px solid var(--card-border); font-family: monospace; font-size: 0.75rem; color: var(--text-secondary); max-height: 80px; overflow-y: auto;">
+              Scraper idle. Awaiting trigger signal...
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Results & Outputs -->
+        <div class="panel" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="panel-title">
+            <span>Classifier Response</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; flex: 1;">
+            <div style="display: flex; align-items: center; justify-content: space-between;">
+              <span style="font-size: 0.9rem; color: var(--text-secondary);">Classification Status:</span>
+              <div class="tflite-status neutral" id="tflite-indicator">
+                <span class="agent-dot" style="background-color:currentColor;"></span>
+                <span id="tflite-text">Idle</span>
+              </div>
+            </div>
+
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px;">
+              <div style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border: 1px solid var(--card-border);">
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Sentiment Score</div>
+                <div style="font-size: 1.25rem; font-weight: 700; color: #fff;" id="sentiment-result-val">--</div>
+              </div>
+              <div style="background: rgba(255,255,255,0.02); padding: 10px; border-radius: 8px; border: 1px solid var(--card-border);">
+                <div style="font-size: 0.75rem; color: var(--text-muted);">Urgency Score</div>
+                <div style="font-size: 1.25rem; font-weight: 700; color: #fff;" id="urgency-result-val">--</div>
+              </div>
+            </div>
+
+            <!-- Layer 2 & 3 summary logs -->
+            <div style="display: flex; flex-direction: column; gap: 8px; font-size: 0.8rem;">
+              <div>
+                <strong style="color: var(--accent-secondary);">Layer 2: Priority Weight:</strong> 
+                <span id="layer2-val" style="color: var(--text-secondary);">--</span>
+              </div>
+              <div>
+                <strong style="color: var(--accent-secondary);">Layer 3: Summary:</strong> 
+                <p id="layer3-val" style="color: var(--text-secondary); line-height: 1.4; margin-top: 4px; font-style: italic;">No signal summarized.</p>
+              </div>
+            </div>
+
+            <!-- Expected JSON block -->
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-top: auto;">
+              <span style="font-size:0.75rem; text-transform:uppercase; color:var(--text-muted); font-weight:700;">Expected Output Payload</span>
+              <pre class="json-container" id="marketing-json-output">{
+  "Agent": "marketing",
+  "Sentiment": null,
+  "TrendingPlatform": null,
+  "Layer1_Scrape": {},
+  "Layer2_TFLite_Priority_Weighting": {},
+  "Layer3_Context_Aware_Summarization": {}
+}</pre>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+
+      <!-- Filtering controls -->
+      <section class="panel">
+        <div style="display: flex; flex-direction: column; gap: 15px;">
+          <div>
+            <span style="font-size:0.8rem; text-transform:uppercase; color:var(--text-secondary); font-weight:600; display:block; margin-bottom:8px;">Competitor filter</span>
+            <div class="filter-bar" id="competitor-filters">
+              <button class="filter-btn active" data-competitor="all">All Competitors</button>
+              <!-- Dynamic options -->
+            </div>
+          </div>
+          <div>
+            <span style="font-size:0.8rem; text-transform:uppercase; color:var(--text-secondary); font-weight:600; display:block; margin-bottom:8px;">Channel filter</span>
+            <div class="filter-bar" id="channel-filters">
+              <button class="filter-btn active" data-channel="all">All Channels</button>
+              <button class="filter-btn" data-channel="LinkedIn">LinkedIn</button>
+              <button class="filter-btn" data-channel="Google Search">Google Search</button>
+              <button class="filter-btn" data-channel="YouTube">YouTube</button>
+              <button class="filter-btn" data-channel="Twitter / X">Twitter / X</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Campaigns grid -->
+      <section class="grid-cards" id="campaigns-grid-container">
+        <!-- Rendered via JS -->
+      </section>
+
+    </main>
+
+  </div>
+
+  <!-- Simulation Dialog (Modern Web Modal) -->
+  <dialog id="simulation-dialog" class="panel animate-fade-in" style="margin: auto; width: 90%; max-width: 500px; padding: 2rem; border: 1px solid var(--accent-primary); outline: none; background: #0b0f19;">
+    <h2 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem; background: linear-gradient(135deg, #fff, var(--accent-secondary)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;">Simulate Ad Campaign Detection</h2>
+    
+    <form id="campaign-form" method="dialog" style="display: flex; flex-direction: column; gap: 1.25rem;">
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="comp-name" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Competitor</label>
+        <select id="comp-name" required style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; outline: none;">
+          <option value="Acme Corp" style="background:#0b0f19;">Acme Corp</option>
+          <option value="Initech" style="background:#0b0f19;">Initech</option>
+          <option value="Hooli" style="background:#0b0f19;">Hooli</option>
+        </select>
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="camp-title" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Campaign Headline</label>
+        <input type="text" id="camp-title" placeholder="e.g. Next-Gen Enterprise Integrations" required style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; outline: none;">
+      </div>
+
+      <div style="display: flex; flex-direction: column; gap: 6px;">
+        <label for="camp-channel" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Channel</label>
+        <select id="camp-channel" required style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; outline: none;">
+          <option value="LinkedIn" style="background:#0b0f19;">LinkedIn</option>
+          <option value="Google Search" style="background:#0b0f19;">Google Search</option>
+          <option value="YouTube" style="background:#0b0f19;">YouTube</option>
+          <option value="Twitter / X" style="background:#0b0f19;">Twitter / X</option>
+        </select>
+      </div>
+
+      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="camp-spent" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Est. Spent ($)</label>
+          <input type="number" id="camp-spent" value="5000" min="1" required style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; outline: none;">
+        </div>
+        <div style="display: flex; flex-direction: column; gap: 6px;">
+          <label for="camp-clicks" style="font-size: 0.85rem; color: var(--text-secondary); font-weight: 500;">Clicks</label>
+          <input type="number" id="camp-clicks" value="450" min="0" required style="padding: 10px; border-radius: 8px; background: rgba(255,255,255,0.05); border: 1px solid var(--card-border); color: #fff; font-family: inherit; outline: none;">
+        </div>
+      </div>
+
+
+
+      <div style="display: flex; justify-content: flex-end; gap: 12px; margin-top: 1rem;">
+        <button type="button" class="btn btn-secondary" id="btn-close-modal">Cancel</button>
+        <button type="submit" class="btn btn-primary">Simulate</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="js/marketing.js"></script>
+</body>
+</html>

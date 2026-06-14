@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarketWatch Cockpit - AI agent orchestration network.">
+  <title>MarketWatch | Executive AI Cockpit</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+          </svg>
+        </div>
+        <span class="brand-name">MarketWatch</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item active" id="nav-home">
+          <a href="index.html">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-marketing">
+          <a href="marketing.html">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+            <span>Marketing AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-product">
+          <a href="product.html">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <span>Product AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-sales">
+          <a href="sales.html">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 1.21-1.04 2.01-2.9 2.01-1.99 0-2.77-.97-2.87-2.4H5.98c.1 2.15 1.75 3.42 3.72 3.89V21h3v-2.19c2-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.77-4.7-4.36z"/></svg>
+            <span>Sales AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-strategy">
+          <a href="strategy.html">
+            <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+            <span>Strategy AI</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="agent-status-panel">
+          <div class="agent-status-title">Agent Network Status</div>
+          <div class="agent-status-list">
+            <div class="agent-status-row">
+              <span>Marketing Agent</span>
+              <span><span class="agent-dot active" id="dot-marketing"></span>Active</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Product Agent</span>
+              <span><span class="agent-dot active" id="dot-product"></span>Active</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Sales Agent</span>
+              <span><span class="agent-dot active" id="dot-sales"></span>Active</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Strategy Agent</span>
+              <span><span class="agent-dot active" id="dot-strategy"></span>Active</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header>
+        <div class="page-title">
+          <h1>AI Agent Network Cockpit</h1>
+          <p>Consolidated cross-agent feeds, datasets, and strategic forecasts</p>
+        </div>
+        <div class="header-actions">
+          <button class="btn btn-secondary" id="btn-refresh">
+            <svg style="width:16px; height:16px; fill:currentColor; margin-bottom:-2px;" viewBox="0 0 24 24">
+              <path d="M17.65 6.35C16.2 4.9 14.21 4 12 4c-4.42 0-7.99 3.58-7.99 8s3.57 8 7.99 8c3.73 0 6.84-2.55 7.73-6h-2.08c-.82 2.33-3.04 4-5.65 4-3.31 0-6-2.69-6-6s2.69-6 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"/>
+            </svg>
+            <span>Sync Swarm</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- Stats Grid -->
+      <section class="grid-stats">
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Competitor Ad Campaigns</span>
+            <div class="stat-icon primary">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="stat-campaigns">--</div>
+          <div class="stat-trend positive">Marketing AI Agent</div>
+        </div>
+
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Customer Reviews Indexed</span>
+            <div class="stat-icon success">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="stat-reviews">--</div>
+          <div class="stat-trend positive">Product AI Agent</div>
+        </div>
+
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Sales Pipeline Opportunities</span>
+            <div class="stat-icon secondary">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 17h-2v-2h2v2zm2.07-7.75l-.9.92C13.45 12.9 13 13.5 13 15h-2v-.5c0-1.1.45-2.1 1.17-2.83l1.24-1.26c.37-.36.59-.86.59-1.41 0-1.1-.9-2-2-2s-2 .9-2 2H7c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.04-.42 1.99-1.07 2.25z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="stat-leads">--</div>
+          <div class="stat-trend positive">Sales AI Agent</div>
+        </div>
+
+        <div class="panel stat-card">
+          <div class="stat-header">
+            <span>Proposed Strategic Recommendations</span>
+            <div class="stat-icon warning">
+              <svg width="20" height="20" viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+            </div>
+          </div>
+          <div class="stat-value" id="stat-strategies">--</div>
+          <div class="stat-trend positive">Strategy AI Agent</div>
+        </div>
+      </section>
+
+      <!-- Main Layout Details -->
+      <section class="grid-main">
+        
+        <!-- Left: Dataset Ingestion & Model Details -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          
+          <!-- File Upload Panel -->
+          <div class="panel">
+            <div class="panel-title">
+              <span>Ingest Raw Dataset Loop</span>
+              <span class="badge badge-positive">Ready for CSV/JSON</span>
+            </div>
+            
+            <div style="border: 2px dashed var(--card-border); border-radius: 12px; padding: 30px; text-align: center; background: rgba(255,255,255,0.01);">
+              <svg style="width: 40px; height: 40px; fill: var(--text-muted); margin-bottom: 12px;" viewBox="0 0 24 24">
+                <path d="M19.35 10.04C18.67 6.59 15.64 4 12 4 9.11 4 6.6 5.64 5.35 8.04 2.34 8.36 0 10.91 0 14c0 3.31 2.69 6 6 6h13c2.76 0 5-2.24 5-5 0-2.64-2.05-4.78-4.65-4.96zM14 13v4h-4v-4H7l5-5 5 5h-3z"/>
+              </svg>
+              <h3 style="font-size: 0.95rem; margin-bottom: 6px;">Drag and drop raw dataset here</h3>
+              <p style="font-size: 0.8rem; color: var(--text-muted); margin-bottom: 16px;">Supports Amazon Reviews or Twitter Sentiment spreadsheets up to 5000 rows</p>
+              
+              <input type="file" id="file-upload-input" style="display: none;" accept=".csv,.json">
+              <div style="display:flex; justify-content:center; gap:10px;">
+                <button class="btn btn-secondary" id="btn-upload">
+                  <span id="upload-btn-text">Select File</span>
+                </button>
+                <button class="btn btn-primary" id="btn-process" disabled style="opacity: 0.6; cursor: not-allowed;">
+                  <span>Process Dataset</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Model Cards -->
+          <div class="panel">
+            <div class="panel-title">
+              <span>TFLite Models Details</span>
+            </div>
+            
+            <div style="display: flex; flex-direction: column; gap: 12px;">
+              <div class="card model-card" id="card-tflite-info">
+                <div class="card-header">
+                  <strong>model.tflite</strong>
+                  <span class="badge badge-positive">Loaded successfully</span>
+                </div>
+                <div class="card-body">
+                  <p style="font-size: 0.85rem; color: var(--text-secondary);">
+                    Compiled TensorFlow Lite classifier model inside project assets folder. Handles priority weighting features and sentiment scoring mapping.
+                  </p>
+                  <div class="model-card-details">
+                    <table style="font-size: 0.75rem; width: 100%;">
+                      <tr>
+                        <td style="color:var(--text-muted); font-weight:600;">File Path</td>
+                        <td>/assets/model.tflite</td>
+                      </tr>
+                      <tr>
+                        <td style="color:var(--text-muted); font-weight:600;">Size</td>
+                        <td>31.35 KB</td>
+                      </tr>
+                      <tr>
+                        <td style="color:var(--text-muted); font-weight:600;">Inputs</td>
+                        <td>12 Feature Tensors</td>
+                      </tr>
+                    </table>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Swarm Live Alerts Feed -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          
+          <div class="panel" style="flex: 1;">
+            <div class="panel-title">
+              <span>Live Agent Alerts Feed</span>
+              <span class="badge badge-neutral" id="alerts-count">0 New</span>
+            </div>
+            
+            <div class="activity-feed" id="alerts-feed-container">
+              <!-- Rendered via JS -->
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <!-- Campaigns Table Preview -->
+      <section class="panel">
+        <div class="panel-title">
+          <span>Active Ad Campaigns Preview</span>
+          <a href="marketing.html" class="btn btn-secondary" style="font-size: 0.75rem; padding: 6px 12px;">Go to Marketing AI</a>
+        </div>
+        
+        <div class="table-container">
+          <table>
+            <thead>
+              <tr>
+                <th>Competitor</th>
+                <th>Campaign Headline</th>
+                <th>Channel</th>
+                <th>Est. Spent</th>
+                <th>Impact Class</th>
+              </tr>
+            </thead>
+            <tbody id="campaigns-preview-body">
+              <!-- Rendered via JS -->
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/home.js"></script>
+</body>
+</html>

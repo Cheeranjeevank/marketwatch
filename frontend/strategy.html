@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="MarketWatch Strategy Intelligence - Swarm matrix triggers and executive synthesis plans.">
+  <title>MarketWatch | Strategy Swarm Intelligence</title>
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* Terminal text typewriter cursor */
+    .typing-text::after {
+      content: '|';
+      animation: cursor-blink 0.8s infinite;
+      color: var(--accent-secondary);
+    }
+    @keyframes cursor-blink {
+      0%, 100% { opacity: 0; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="app-container">
+    
+    <!-- Sidebar Navigation -->
+    <aside class="sidebar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24">
+            <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
+          </svg>
+        </div>
+        <span class="brand-name">MarketWatch</span>
+      </div>
+      <ul class="nav-menu">
+        <li class="nav-item" id="nav-home">
+          <a href="index.html">
+            <svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg>
+            <span>Overview</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-marketing">
+          <a href="marketing.html">
+            <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm-5 14H4v-4h11v4zm0-5H4V9h11v4zm5 5h-4V9h4v9z"/></svg>
+            <span>Marketing AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-product">
+          <a href="product.html">
+            <svg viewBox="0 0 24 24"><path d="M20 2H4c-1.1 0-1.99.9-1.99 2L2 22l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM6 9h12v2H6V9zm8 5H6v-2h8v2zm4-6H6V6h12v2z"/></svg>
+            <span>Product AI</span>
+          </a>
+        </li>
+        <li class="nav-item" id="nav-sales">
+          <a href="sales.html">
+            <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 1.21-1.04 2.01-2.9 2.01-1.99 0-2.77-.97-2.87-2.4H5.98c.1 2.15 1.75 3.42 3.72 3.89V21h3v-2.19c2-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.77-4.7-4.36z"/></svg>
+            <span>Sales AI</span>
+          </a>
+        </li>
+        <li class="nav-item active" id="nav-strategy">
+          <a href="strategy.html">
+            <svg viewBox="0 0 24 24"><path d="M9 21c0 .55.45 1 1 1h4c.55 0 1-.45 1-1v-1H9v1zm3-19C8.14 2 5 5.14 5 9c0 2.38 1.19 4.47 3 5.74V17c0 .55.45 1 1 1h6c.55 0 1-.45 1-1v-2.26c1.81-1.27 3-3.36 3-5.74 0-3.86-3.14-7-7-7zm2.85 11.1l-.85.6V16h-4v-2.3l-.85-.6C7.8 12.16 7 10.63 7 9c0-2.76 2.24-5 5-5s5 2.24 5 5c0 1.63-.8 3.16-2.15 4.1z"/></svg>
+            <span>Strategy AI</span>
+          </a>
+        </li>
+      </ul>
+      <div class="sidebar-footer">
+        <div class="agent-status-panel">
+          <div class="agent-status-title">Agent Network Status</div>
+          <div class="agent-status-list">
+            <div class="agent-status-row">
+              <span>Marketing Agent</span>
+              <span><span class="agent-dot active" id="dot-marketing"></span>Scanning</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Product Agent</span>
+              <span><span class="agent-dot active" id="dot-product"></span>Active</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Sales Agent</span>
+              <span><span class="agent-dot active" id="dot-sales"></span>Active</span>
+            </div>
+            <div class="agent-status-row">
+              <span>Strategy Agent</span>
+              <span><span class="agent-dot idle" id="dot-strategy"></span>Idle</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      
+      <!-- Header -->
+      <header>
+        <div class="page-title">
+          <h1>Strategy Swarm Matrix</h1>
+          <p>Analyzing signal correlation parameters to formulate immediate tactical recommendations</p>
+        </div>
+      </header>
+
+      <!-- Main Layout Details -->
+      <section class="grid-main">
+        
+        <!-- Left: Brain Trigger Condition Matrix & Executive Terminal -->
+        <div style="display: flex; flex-direction: column; gap: 24px;">
+          
+          <!-- Matrix Cell Selector -->
+          <div class="panel">
+            <div class="panel-title">
+              <span>Get Daily Business Advice</span>
+              <span class="badge badge-warning">Simulate Market Changes</span>
+            </div>
+
+            <p style="font-size: 0.8rem; color: var(--text-secondary); margin-bottom: 16px;">
+              Select correlation states across AI nodes to formulate the composite strategy engine logic.
+            </p>
+
+            <div class="trigger-grid">
+              <div class="trigger-cell" id="cell-product" data-signal="heating">
+                <div style="font-weight: 700; font-size: 0.85rem; color: #fff;">Amazon FBA/Listing Signal</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;" id="cell-product-txt">Stable thermal logs</div>
+              </div>
+
+              <div class="trigger-cell" id="cell-marketing" data-signal="hype">
+                <div style="font-weight: 700; font-size: 0.85rem; color: #fff;">Amazon PPC/Ad Signal</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;" id="cell-marketing-txt">Stable campaign buzz</div>
+              </div>
+
+              <div class="trigger-cell" id="cell-sales" data-signal="conversion">
+                <div style="font-weight: 700; font-size: 0.85rem; color: #fff;">ACoS / Conversion Signal</div>
+                <div style="font-size: 0.75rem; color: var(--text-secondary); margin-top: 6px;" id="cell-sales-txt">Stable pipeline</div>
+              </div>
+            </div>
+
+            <div style="display:flex; justify-content: space-between; margin-top: 15px;">
+              <button class="btn btn-secondary" id="btn-reset-matrix" style="font-size:0.75rem; padding: 6px 12px;">Reset Signals</button>
+              <button class="btn btn-primary" id="btn-synthesize-strategy" style="font-size:0.75rem; padding: 6px 12px;">Ask for Advice</button>
+            </div>
+          </div>
+
+          <!-- Executive synthesis terminal screen -->
+          <div class="panel" style="flex: 1; min-height: 200px; display: flex; flex-direction: column;">
+            <div class="panel-title">
+              <span>Your Daily Action Plan</span>
+              <span class="badge badge-positive">Ready</span>
+            </div>
+            
+            <div style="background: rgba(0,0,0,0.45); border-radius: 8px; border: 1px solid var(--card-border); padding: 18px; font-family: monospace; font-size: 0.85rem; color: #f8fafc; line-height: 1.5; flex: 1; overflow-y: auto;">
+              <span class="typing-text" id="terminal-screen-text">System initialized. Standing by for strategy trigger signals...</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Right: Strategy payload JSON -->
+        <div class="panel" style="display: flex; flex-direction: column; gap: 1.25rem;">
+          <div class="panel-title">
+            <span>Strategy Agent Response</span>
+          </div>
+
+          <div style="display: flex; flex-direction: column; gap: 1rem; flex: 1;">
+            
+            <div style="background: rgba(255,255,255,0.02); padding: 12px; border-radius: 8px; border: 1px solid var(--card-border); font-size: 0.8rem; display: flex; flex-direction: column; gap: 8px;">
+              <div>
+                <span style="color:var(--text-muted); display:block;">Immediate Action:</span>
+                <span id="res-immediate-action" style="color:#fff; font-weight:600; display:block; margin-top:4px;">--</span>
+              </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 6px; margin-top: auto;">
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: var(--text-muted); font-weight: 700;">expected strategy_ai JSON</span>
+              <pre class="json-container" id="strategy-json-output" style="color: #fca5a5;">{
+  "agent": "strategy_ai",
+    "topic": "Amazon Seller Central Budget Allocation",
+  "timestamp": null,
+  "telemetry_inputs": {},
+  "recommended_pivot": null,
+  "confidence_score": null
+}</pre>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Recommendations Status Wall -->
+      <section class="panel">
+        <div class="panel-title">
+          <span>Swarm Recommendations Wall</span>
+          <span class="badge badge-neutral">Confidence Scoring</span>
+        </div>
+
+        <div class="grid-cards" id="recommendations-wall-container">
+          <!-- Dynamically populated -->
+        </div>
+      </section>
+
+    </main>
+
+  </div>
+
+  <script src="js/strategy.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "marketing": {
+    "competitors": ["Acme Corp", "Initech", "Hooli"],
+    "campaigns": [
+      {
+        "id": "c1",
+        "competitor": "Acme Corp",
+        "title": "Scale Your Operations with Enterprise AI",
+        "channel": "LinkedIn",
+        "spent": 15000,
+        "clicks": 2450,
+        "sentiment": "Positive",
+        "impact": "High",
+        "status": "Active",
+        "date": "2026-06-01"
+      },
+      {
+        "id": "c2",
+        "competitor": "Initech",
+        "title": "Legacy Systems are Dead: Modernize Now",
+        "channel": "Google Search",
+        "spent": 8500,
+        "clicks": 920,
+        "sentiment": "Neutral",
+        "impact": "Medium",
+        "status": "Active",
+        "date": "2026-06-05"
+      },
+      {
+        "id": "c3",
+        "competitor": "Hooli",
+        "title": "Nucleus 2.0: The Future of Cloud Databases",
+        "channel": "YouTube",
+        "spent": 45000,
+        "clicks": 12300,
+        "sentiment": "Highly Positive",
+        "impact": "Critical",
+        "status": "Active",
+        "date": "2026-06-10"
+      },
+      {
+        "id": "c4",
+        "competitor": "Acme Corp",
+        "title": "Unmatched Pricing: 50% Off Annual Plans",
+        "channel": "Twitter / X",
+        "spent": 12000,
+        "clicks": 3100,
+        "sentiment": "Mixed",
+        "impact": "High",
+        "status": "Active",
+        "date": "2026-06-12"
+      }
+    ]
+  },
+  "product": {
+    "reviews": [
+      {
+        "id": "r1",
+        "platform": "G2",
+        "rating": 2,
+        "content": "The reporting interface is incredibly dated and exporting data takes ages. We need faster exports.",
+        "sentiment": "Negative",
+        "gap": "Advanced Export / Custom Reporting",
+        "user": "Sarah J., Operations Lead",
+        "date": "2026-06-11"
+      },
+      {
+        "id": "r2",
+        "platform": "App Store",
+        "rating": 3,
+        "content": "Overall the speed is decent, but there is no dark mode. Working at night is causing severe eye strain.",
+        "sentiment": "Neutral",
+        "gap": "Dark Mode Interface",
+        "user": "David K., Software Engineer",
+        "date": "2026-06-12"
+      },
+      {
+        "id": "r3",
+        "platform": "Product Hunt",
+        "rating": 4,
+        "content": "Very accurate search algorithms! However, we desperately need integrations with HubSpot and Salesforce to push leads.",
+        "sentiment": "Positive",
+        "gap": "CRM Integrations (HubSpot/Salesforce)",
+        "user": "Elena R., VP of Sales",
+        "date": "2026-06-13"
+      },
+      {
+        "id": "r4",
+        "platform": "Trustpilot",
+        "rating": 1,
+        "content": "Server keeps dropping connections. API timeouts are frequent when loading our monthly dashboard.",
+        "sentiment": "Negative",
+        "gap": "API Performance & Gateway Timeout Fix",
+        "user": "Marcus T., Chief Technology Officer",
+        "date": "2026-06-13"
+      }
+    ]
+  },
+  "sales": {
+    "leads": [
+      {
+        "id": "l1",
+        "company": "TechCorp Solutions",
+        "signal": "Hired 5 new sales directors; executive complained on Twitter about Acme Corp's billing issues.",
+        "role": "VP of Global Sales",
+        "value": 25000,
+        "confidence": 88,
+        "status": "Hot",
+        "date": "2026-06-13"
+      },
+      {
+        "id": "l2",
+        "company": "Globex International",
+        "signal": "CEO posted a public query on LinkedIn seeking custom analytics reporting systems.",
+        "role": "Chief Operations Officer",
+        "value": 48000,
+        "confidence": 94,
+        "status": "Hot",
+        "date": "2026-06-12"
+      },
+      {
+        "id": "l3",
+        "company": "Stark Industries",
+        "signal": "Engineering department researching migrations away from legacy Initech software.",
+        "role": "Director of IT Infrastructure",
+        "value": 75000,
+        "confidence": 76,
+        "status": "Warm",
+        "date": "2026-06-10"
+      },
+      {
+        "id": "l4",
+        "company": "Umbrella Corp",
+        "signal": "Three product managers downloaded the whitepaper on AI-driven market intelligence.",
+        "role": "Lead Product Designer",
+        "value": 12000,
+        "confidence": 62,
+        "status": "Cool",
+        "date": "2026-06-09"
+      }
+    ]
+  },
+  "strategy": {
+    "recommendations": [
+      {
+        "id": "rec1",
+        "title": "Prioritize CRM Integrations",
+        "description": "Integrate HubSpot and Salesforce immediately. Data shows 3 high-value hot/warm leads are actively requesting integrations, and G2 feedback indicates CRM sync is a major churn risk.",
+        "confidence": 95,
+        "impact": "High",
+        "risk": "Low",
+        "status": "Proposed"
+      },
+      {
+        "id": "rec2",
+        "title": "Deploy Anti-Acme Ad Campaign",
+        "description": "Launch targeted LinkedIn/Twitter campaigns emphasizing Initech/Acme billing problems. Capitalize on Acme's recent 50% discount campaigns and associated complaints about hidden costs.",
+        "confidence": 87,
+        "impact": "High",
+        "risk": "Medium",
+        "status": "Proposed"
+      },
+      {
+        "id": "rec3",
+        "title": "Resolve Gateway API Bottlenecks",
+        "description": "Dedicate engineering resource to fix API timeouts. Trustpilot negative feedback has increased by 15% due to monthly reporting timeouts.",
+        "confidence": 92,
+        "impact": "Critical",
+        "risk": "Low",
+        "status": "In Progress"
+      },
+      {
+        "id": "rec4",
+        "title": "Implement Web App Dark Mode",
+        "description": "Ship the dark theme configuration. A quick win that answers App Store customer feedback, reducing eye strain and showing quick response to customer feature requests.",
+        "confidence": 99,
+        "impact": "Low",
+        "risk": "None",
+        "status": "Completed"
+      }
+    ]
+  }
+}
