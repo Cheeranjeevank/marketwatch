@@ -1,6 +1,6 @@
 # MarketWatch: Autonomous Swarm Intelligence 🐝
 
-![MarketWatch](https://img.shields.io/badge/Status-Active-brightgreen) ![Flutter](https://img.shields.io/badge/Mobile-Flutter-blue) ![Dart Frog](https://img.shields.io/badge/Backend-Dart_Frog-0175C2) ![Python](https://img.shields.io/badge/AI_Engine-Python-3776AB)
+![MarketWatch](https://img.shields.io/badge/Status-Active-brightgreen) ![Flutter](https://img.shields.io/badge/Mobile-Flutter-blue) ![Dart Frog](https://img.shields.io/badge/Backend-Dart_Frog-0175C2)
 
 **MarketWatch** is an AI-powered "Swarm Intelligence" platform that acts as an automated Chief Operating Officer (COO) and digital strategy team for e-commerce brands, SMBs, and indie-creators.
 
@@ -34,9 +34,7 @@ MarketWatch is broken down into four distinct, communicating AI agents:
 * **Mobile Application:** Flutter & Dart (featuring on-device ML, Camera access, and dynamic telemetry UI).
 * **Web Command Center:** Vanilla HTML/CSS/JS (Lightweight, glassmorphism UI for desktop monitoring).
 * **Backend Routing:** Dart Frog (REST APIs, agent orchestration).
-* **Backend AI Engine:** Python, FastAPI.
-* **Data Layer:** Redis, PostgreSQL.
-* **Machine Learning:** TensorFlow Lite (Edge classification), Google ML Kit (Text Recognition/OCR), and advanced LLM prompting for strategy generation.
+* **Machine Learning:** TensorFlow Lite (Edge classification), Google ML Kit (Text Recognition/OCR), and advanced generative AI prompting for strategy generation.
 
 ---
 
@@ -51,11 +49,10 @@ Indian SMBs, D2C brands, and student developers operate in highly competitive ma
 ### Prerequisites
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (for mobile app)
 - [Dart](https://dart.dev/get-dart) (for Dart Frog backend)
-- [Python 3.9+](https://www.python.org/downloads/) (for AI logic)
 
 ### Running the Backend
 1. Navigate to the `backend` directory.
-2. Install Python dependencies: `pip install -r requirements.txt`
+2. Run `dart pub get`
 3. Run the Dart Frog server: `dart_frog dev`
 
 ### Running the Web Dashboard
