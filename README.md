@@ -1,4 +1,4 @@
-# MarketWatch: Autonomous Swarm Intelligence 🐝
+# MarketWatch: Autonomous Swarm Intelligence 
 
 ![MarketWatch](https://img.shields.io/badge/Status-Active-brightgreen) ![Flutter](https://img.shields.io/badge/Mobile-Flutter-blue) ![Dart Frog](https://img.shields.io/badge/Backend-Dart_Frog-0175C2)
 
@@ -8,7 +8,7 @@ Built with a unified **Web Dashboard** and a companion **Flutter mobile app**, M
 
 ---
 
-## 🧠 The Swarm Architecture (Core Agents)
+## The Swarm Architecture (Core Agents)
 
 MarketWatch is broken down into four distinct, communicating AI agents:
 
@@ -29,7 +29,7 @@ MarketWatch is broken down into four distinct, communicating AI agents:
 
 ---
 
-## 💻 Technology Stack
+## Technology Stack
 
 * **Mobile Application:** Flutter & Dart (featuring on-device ML, Camera access, and dynamic telemetry UI).
 * **Web Command Center:** Vanilla HTML/CSS/JS (Lightweight, glassmorphism UI for desktop monitoring).
@@ -38,13 +38,13 @@ MarketWatch is broken down into four distinct, communicating AI agents:
 
 ---
 
-## 🎯 The Problem it Solves
+## The Problem it Solves
 
 Indian SMBs, D2C brands, and student developers operate in highly competitive markets with razor-thin margins. They cannot afford dedicated marketing agencies or product managers. MarketWatch democratizes enterprise-grade data analytics, allowing a one-person team to instantly know why their ads are failing or why their app is getting negative reviews, accompanied by an immediate AI-generated action plan to fix it.
 
 ---
 
-## 🛠 Getting Started
+## Getting Started
 
 ### Prerequisites
 - [Flutter SDK](https://docs.flutter.dev/get-started/install) (for mobile app)
