@@ -1,4 +1,4 @@
-# MarketWatch: Autonomous Swarm Intelligence 
+# MarketWatch: Autonomous Swarm Intelligence - COMPARATIVE WAR ROOM AI 
 
 ![MarketWatch](https://img.shields.io/badge/Status-Active-brightgreen) ![Flutter](https://img.shields.io/badge/Mobile-Flutter-blue) ![Dart Frog](https://img.shields.io/badge/Backend-Dart_Frog-0175C2)
 
