@@ -2,9 +2,17 @@
 
 ![MarketWatch](https://img.shields.io/badge/Status-Active-brightgreen) ![Flutter](https://img.shields.io/badge/Mobile-Flutter-blue) ![Dart Frog](https://img.shields.io/badge/Backend-Dart_Frog-0175C2)
 
-**MarketWatch** is an AI-powered "Swarm Intelligence" platform that acts as an automated Chief Operating Officer (COO) and digital strategy team for e-commerce brands, SMBs, and indie-creators.
+**MarketWatch** is a next-generation, AI-powered "Swarm Intelligence" platform designed to act as an automated Chief Operating Officer (COO) and digital strategy team for e-commerce brands, SMBs, indie-hackers, and creators. 
 
-Built with a unified **Web Dashboard** and a companion **Flutter mobile app**, MarketWatch eliminates the need for expensive data analysts by deploying a swarm of specialized AI agents that monitor marketing spend, synthesize customer feedback, and generate actionable business strategies in real-time.
+In today’s hyper-competitive digital economy, analyzing market trends, tracking competitor ad spend, and understanding customer sentiment typically requires hiring an expensive team of data analysts and using fragmented SaaS tools. MarketWatch solves this by deploying a synchronized "swarm" of specialized AI agents. These agents autonomously monitor your business telemetry, extract actionable insights, and generate step-by-step strategies to maximize your profitability—all accessible via a unified Web Dashboard and a companion Flutter Mobile App.
+
+---
+
+## 🌟 Core Philosophy: Swarm Intelligence
+
+Unlike traditional dashboards that passively display charts, MarketWatch uses **Swarm Intelligence**. This means our specialized AI agents do not operate in silos; they communicate with one another. 
+
+For instance, if the **Product Agent** detects a sudden influx of negative reviews about a "stitching defect," it instantly alerts the **Strategy Agent**. The Strategy Agent then dynamically updates your "Action Plan" dashboard, providing immediate guidance on how to halt production, while simultaneously notifying the **Marketing Agent** to pause active ad campaigns for that specific SKU, preventing you from bleeding ad spend on a defective product.
 
 ---
 
@@ -13,54 +21,115 @@ Built with a unified **Web Dashboard** and a companion **Flutter mobile app**, M
 MarketWatch is broken down into four distinct, communicating AI agents:
 
 ### 1. Marketing Agent (Ads Intelligence)
-* **What it does:** Monitors competitor ad campaigns across platforms like Amazon, LinkedIn, and Instagram. 
-* **Key Features:** Automatically calculates Cost-Per-Click (CPC) and Return on Ad Spend (RoAS). Using custom weighted logic, it dynamically flags your ad-spend efficiency as *Critical*, *Normal*, or *Good*, preventing you from bleeding money on inefficient campaigns.
+* **What it does:** Monitors your active ad campaigns and competitor advertisements across major platforms (Amazon, LinkedIn, Instagram, etc.).
+* **Key Features:** 
+  * **Automated Profitability Engine:** Automatically calculates vital metrics like Cost-Per-Click (CPC), Estimated Spend, and Return on Ad Spend (RoAS).
+  * **Dynamic Risk Assessment:** Using custom weighted logic (e.g., assessing Spend vs. Clicks vs. Sentiment), it dynamically flags your ad-spend efficiency as *Critical*, *Normal*, or *Good*.
+  * **Competitor Simulation:** Input a competitor's ASIN or Brand Name to instantly simulate and reverse-engineer their ad strategy.
 
-### 2. Product Agent (Feedback Intelligence)
-* **What it does:** Acts as your automated QA and product manager.
-* **Key Features:** Features on-device Camera/OCR (via Google ML Kit) to scan physical return slips or digital reviews. It runs local TF Lite sentiment analysis to extract specific product defects (e.g., "battery overheating" or "stitching issues") and categorizes them instantly.
+### 2. Product Agent (Feedback Intelligence & OCR)
+* **What it does:** Acts as your automated QA tester and product manager, synthesizing raw customer feedback into actionable engineering or manufacturing tasks.
+* **Key Features:** 
+  * **On-Device Optical Character Recognition (OCR):** Using Google ML Kit integrated directly into the Flutter companion app, users can use their smartphone camera to instantly scan physical return slips, warranty cards, or handwritten feedback.
+  * **Defect Extraction via TF Lite:** Runs local TensorFlow Lite sentiment analysis to extract specific defects (e.g., "battery overheating", "UI crashes on login") from noisy customer complaints, categorizing them without needing a constant cloud connection.
 
-### 3. Strategy Agent (Action Plan)
-* **What it does:** The "brain" of the swarm that connects the dots between departments.
-* **Key Features:** It automatically aggregates critical warnings from the Marketing and Product agents. For example, if a negative review is detected by the Product Agent, the Strategy Agent instantly flags it under *"What is your biggest problem today?"* and generates targeted, step-by-step "Senior Developer Advice" or "Business Strategy" to fix the issue.
+### 3. Strategy Agent (Action Plan Generator)
+* **What it does:** The central "brain" of the swarm that connects the dots between departments and generates your daily to-do list.
+* **Key Features:** 
+  * **Cross-Department Aggregation:** It aggregates critical warnings from the Marketing and Product agents.
+  * **Targeted Remediation:** If a negative review is detected, it is flagged under *"What is your biggest problem today?"*. Clicking on this generates a targeted, step-by-step action plan. For example, a software bug yields "Senior Developer Advice" on patching the code, while a pricing issue yields "Business Strategy" on restructuring discount margins.
 
 ### 4. Sales Agent (Revenue Intelligence)
-* **What it does:** Forecasts demand and manages supply-chain alerts based on live market telemetry to ensure you never run out of stock during a trending spike.
+* **What it does:** Forecasts demand and manages supply-chain alerts based on live market telemetry.
+* **Key Features:** 
+  * **Demand Telemetry:** Ensures you never run out of stock during a trending spike or overstock during a market dip by analyzing historical sales velocity against current marketing sentiment.
 
 ---
 
-## Technology Stack
+## 💻 Technology Stack & Architecture
 
-* **Mobile Application:** Flutter & Dart (featuring on-device ML, Camera access, and dynamic telemetry UI).
-* **Web Command Center:** Vanilla HTML/CSS/JS (Lightweight, glassmorphism UI for desktop monitoring).
-* **Backend Routing:** Dart Frog (REST APIs, agent orchestration).
-* **Machine Learning:** TensorFlow Lite (Edge classification), Google ML Kit (Text Recognition/OCR), and advanced generative AI prompting for strategy generation.
+MarketWatch is built using a highly optimized, purely Dart-based ecosystem, ensuring seamless code-sharing between the frontend and the backend.
+
+* **Mobile Application (Frontend):** 
+  * Built with **Flutter & Dart**.
+  * Features an immersive, dynamic telemetry UI.
+  * Utilizes on-device ML for Camera access and OCR scanning.
+* **Web Command Center (Frontend):** 
+  * Built with **Vanilla HTML/CSS/JS**.
+  * Features a lightweight, modern "glassmorphism" aesthetic for deep-dive desktop monitoring.
+* **Backend Engine & Routing:** 
+  * Built with **Dart Frog**.
+  * Handles REST API routing, state management, and agent orchestration in a completely stateless environment.
+* **Machine Learning & AI:** 
+  * **TensorFlow Lite (Edge classification):** Used for fast, on-device sentiment scoring.
+  * **Google ML Kit:** Powers the Text Recognition and OCR pipelines.
+  * **Generative AI Prompting:** Advanced prompt engineering handles complex strategy generation and cross-agent communication.
 
 ---
 
 ## The Problem it Solves
 
-Indian SMBs, D2C brands, and student developers operate in highly competitive markets with razor-thin margins. They cannot afford dedicated marketing agencies or product managers. MarketWatch democratizes enterprise-grade data analytics, allowing a one-person team to instantly know why their ads are failing or why their app is getting negative reviews, accompanied by an immediate AI-generated action plan to fix it.
+Indian SMBs, D2C brands, indie-hackers, and student developers operate in highly competitive markets with razor-thin margins. The barrier to entry for enterprise-grade market intelligence is prohibitively high. 
+
+**MarketWatch democratizes this data.** It allows a one-person team to instantly know:
+1. Why their ads are failing.
+2. Why their app/product is getting negative reviews.
+3. Exactly what steps they need to take to fix it.
+
+It replaces the need for an expensive marketing agency, a dedicated QA tester, and a business consultant, rolling them all into one lightweight application.
 
 ---
 
-## Getting Started
+## 🛠 Getting Started & Installation
 
 ### Prerequisites
-- [Flutter SDK](https://docs.flutter.dev/get-started/install) (for mobile app)
-- [Dart](https://dart.dev/get-dart) (for Dart Frog backend)
+- [Flutter SDK](https://docs.flutter.dev/get-started/install) (for compiling the mobile app)
+- [Dart](https://dart.dev/get-dart) (for running the Dart Frog backend)
 
-### Running the Backend
-1. Navigate to the `backend` directory.
-2. Run `dart pub get`
-3. Run the Dart Frog server: `dart_frog dev`
+### 1. Running the Backend (Dart Frog)
+The backend orchestrates the AI agents and handles API requests.
+```bash
+# Navigate to the backend directory
+cd backend
 
-### Running the Web Dashboard
-1. Navigate to the `frontend` directory.
-2. Serve the static files (e.g., using python simple server): `python -m http.server 8080`
-3. Open `http://localhost:8080/index.html`
+# Fetch dependencies
+dart pub get
 
-### Running the Flutter Mobile App
-1. Navigate to the `marketwatch_app` directory.
-2. Run `flutter pub get`
-3. Run `flutter run` on your connected device or emulator.
+# Start the development server
+dart_frog dev
+```
+*The backend will typically run on `http://localhost:8080`.*
+
+### 2. Running the Web Dashboard
+The web dashboard is a static frontend that interacts with the Dart Frog backend.
+```bash
+# Navigate to the frontend directory
+cd frontend
+
+# Serve the static files (using Python's built-in server as an example)
+python -m http.server 8081
+```
+*Open `http://localhost:8081/index.html` in your browser.*
+
+### 3. Running the Flutter Mobile App
+The mobile app provides on-the-go telemetry and on-device OCR scanning.
+```bash
+# Navigate to the mobile app directory
+cd marketwatch_app
+
+# Fetch Flutter dependencies
+flutter pub get
+
+# Run on your connected Android/iOS device or emulator
+flutter run
+```
+
+---
+
+## 🚀 Future Roadmap
+- **Automated Ad Bidding:** Allowing the Marketing Agent to automatically adjust Facebook/Google ad bids via API based on RoAS scores.
+- **Shopify/WooCommerce Integration:** Directly pulling sales velocity and inventory data from popular e-commerce platforms.
+- **Voice-Activated Strategy Briefings:** Allowing the Strategy Agent to give a daily 60-second audio brief on market conditions using Text-to-Speech (TTS).
+
+---
+*Built with ❤️ for the next generation of builders and creators.*
